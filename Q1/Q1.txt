@@ -1,0 +1,24 @@
+function total(array, target) {
+        for (let index = 0; index < array.length; index++) {
+            for (let j = 0; j < array.length; j++) {
+                if (array[index] == array[j]) {
+                    continue;
+                }
+                else if ((array[index] + array[j]) == target) {
+                    return [index, j];
+                }
+            }
+        }
+    }
+
+    total([3, 2, 4], 6)
+
+    function reverseNumber(number) {
+        let newNumber = 0
+        while (number > 0) {
+            newNumber = (newNumber*10) + (number % 10)
+            number = Math.floor(number / 10)
+            console.log(newNumber);
+        }
+    }
+    reverseNumber(876);
